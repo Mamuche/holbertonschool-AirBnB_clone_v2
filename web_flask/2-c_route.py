@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-""" This modules import Flask class """
+""" Write a script that starts a Flask web application:
+Routes:
+/: display “Hello HBNB!”
+/hbnb: display “HBNB”
+/c/<text>: display “C ” followed by the value of the text variable (replace underscore _ symbols with a space ) """
 from flask import Flask
 
-"""Starts a Flask web application"""
+
 app = Flask(__name__)
 
 
@@ -17,7 +21,7 @@ def hbnb():
 
 
 @app.route("/c/<text>", strict_slashes=False)
-def c_is_fun(text):
+def c(text):
     return "C " + text.replace("_", " ")
 
 

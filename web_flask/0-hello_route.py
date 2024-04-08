@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-""" This modules import Flask class """
+"""Write a script that starts a Flask web application"""
 from flask import Flask
 
-"""Starts a Flask web application"""
+
 app = Flask(__name__)
 
 
@@ -11,4 +11,4 @@ def hello_hbnb():
     return "Hello HBNB!"
 
 if __name__ == '__main__':
-app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000)

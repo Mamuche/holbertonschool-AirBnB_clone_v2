@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-""" This modules import Flask class """
+"""Write a script that starts a Flask web application:
+Routes:
+/: display “Hello HBNB!”
+/hbnb: display “HBNB” """
 from flask import Flask
 
-"""Starts a Flask web application"""
+
 app = Flask(__name__)
 
 

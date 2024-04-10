@@ -23,21 +23,25 @@ def hbnb():
 def c(text):
     return "C " + text.replace("_", " ")
 
+
 @app.route("/python/", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
     return "Python " + text.replace("_", " ")
 
+
 @app.route("/number/<int:n>", strict_slashes=False)
 def number(n):
     if type(n) is int:
         return "{} is a number".format(n)
-    
+
+
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def number_template(n):
     if type(n) is int:
         return render_template("5-number.html", n=n)
-    
+
+
 @app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
 def number_odd_or_even(n):
     if type(n) is int:
@@ -46,6 +50,7 @@ def number_odd_or_even(n):
         else:
             text = "odd"
         return render_template("6-number_odd_or_even.html", n=n, text=text)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

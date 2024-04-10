@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """ Write a script that starts a Flask web application:
 Routes:
-/python/<text>: display “Python ”, followed by the value of the text variable (replace underscore _ symbols with a space )
+/python/<text>: display “Python ”, followed by the value of
+the text variable (replace underscore _ symbols with a space )
 The default value of text is “is cool” """
 from flask import Flask
 
@@ -23,11 +24,11 @@ def hbnb():
 def c(text):
     return "C " + text.replace("_", " ")
 
+
 @app.route("/python/", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
     return "Python " + text.replace("_", " ")
-
 
 
 if __name__ == '__main__':

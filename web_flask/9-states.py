@@ -35,7 +35,7 @@ def close_session(exception):
 @app.route("/states", strict_slashes=False)
 def display():
     states = storage.all(State)
-    return render_template("9-states.html", states=states)
+    return render_template("9-states.html", state=states)
 
 
 @app.route("/states/<id>", strict_slashes=False)
